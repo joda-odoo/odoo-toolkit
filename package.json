@@ -1,0 +1,44 @@
+{
+  "name": "odoo-toolkit",
+  "author": "Jordan D. (Joda)",
+  "displayName": "Odoo Toolkit",
+  "description": "A little extension that make my work in bug fix a bit faster",
+  "version": "0.0.1",
+  "license": "bubbletea-ware",
+  "icon": "icon.png",
+  "repository": "https://github.com/joda-odoo/odoo-toolkit",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:odoo-toolkit.helloWorld"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "odoo-toolkit.findInherit",
+      "title": "Odoo Toolkit: Find inherit"
+    }, {
+      "command": "odoo-toolkit.findModel",
+      "title": "Odoo Toolkit: Find model"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3",
+    "@vscode/test-electron": "^2.2.0"
+  }
+}
